@@ -1,0 +1,78 @@
+:root{
+  --bg:#071014;
+  --card:#0b1213;
+  --muted:#9aa5a5;
+  --green:#00d65f;
+  --accent:#00c853;
+}
+html,body{height:100%;}
+body{
+  background:linear-gradient(180deg, var(--bg), #050606 120%);
+  color:#dbe9e6;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+}
+/* Navbar */
+.navbar{background:#071014;}
+.navbar .navbar-brand{color:var(--green);font-weight:700}
+.navbar .nav-link{color:rgba(255,255,255,0.85)}
+.navbar .nav-link:hover{color:var(--accent)}
+/* Hero */
+header{position:relative; background-size:cover;background-position:center;}
+header::after{content:"";position:absolute;left:0;right:0;top:0;bottom:0;background:linear-gradient(180deg, rgba(0,0,0,0.55), rgba(3,3,3,0.75));}
+header .container{position:relative;z-index:2}
+header h1{font-weight:600;font-size:3rem}
+header .lead{color:var(--muted)}
+/* Cards */
+.card{background:linear-gradient(180deg, rgba(6,9,10,0.6), rgba(8,11,12,0.8));border:1px solid rgba(255,255,255,0.03)}
+.card .card-title{color:var(--green);font-weight:700}
+.card .card-text{color:var(--muted)}
+.btn-primary{background:var(--green);border-color:var(--green)}
+.btn-primary:hover{background:var(--accent);border-color:var(--accent)}
+/* Sections */
+section{padding-top:4rem;padding-bottom:4rem}
+.container h2{color:#dbe9e6}
+/* Feature boxes */
+.feature-box{background:rgba(0,0,0,0.35);border-radius:8px;padding:1.75rem;border:1px solid rgba(255,255,255,0.02)}
+.feature-box h5{color:var(--green)}
+.feature-box p{color:var(--muted);margin:0}
+/* Footer */
+footer{background:#041011}
+footer p{color:rgba(255,255,255,0.6)}
+/* Utilities */
+.text-green{color:var(--green)}
+.btn-success{background:var(--green);border-color:var(--green)}
+.modal-content{background:#071014}
+/* Responsive tweaks */
+@media(min-width:992px){header h1{font-size:3.8rem}}
+
+/* Modal / Login styles */
+.modal-dark{background:linear-gradient(180deg, #071014, #041010);color:#dbe9e6;border-radius:10px}
+.modal-tabs .nav-link{background:transparent;border:0;color:rgba(255,255,255,0.7)}
+.modal-tabs .nav-link.active{color:var(--green);border-bottom:2px solid rgba(0,214,95,0.12)}
+.dark-input{background:#081212;border:1px solid rgba(255,255,255,0.03);color:#cfeee2}
+.dark-input::placeholder{color:rgba(255,255,255,0.08)}
+.btn-eye{border-left:1px solid rgba(255,255,255,0.03)}
+.phone-prefix{background:rgba(0,0,0,0.25);padding:0.45rem 0.6rem;border-radius:6px;border:1px solid rgba(255,255,255,0.02);color:var(--green);font-weight:600}
+.modal-content.modal-dark{box-shadow:0 6px 30px rgba(0,0,0,0.6);}
+.modal-body h4{color:#eaf9ef}
+.modal .btn-secondary{background:#1a1a1a;border-color:rgba(255,255,255,0.03);color:#ddd}
+.modal .btn-success{background:var(--green);border-color:var(--green)}
+.modal .btn-outline-secondary{background:transparent;border:1px solid rgba(255,255,255,0.03);color:#ddd}
+
+/* form spacing inside modal */
+.modal .form-label{color:#cfeee2}
+.modal .input-group .form-control{border-right:0}
+.modal .btn-eye i{color:rgba(255,255,255,0.45)}
+
+/* Testimonials & newsletter */
+.testimonial{background:linear-gradient(180deg, rgba(6,9,10,0.45), rgba(6,9,10,0.6));border-radius:8px;border:1px solid rgba(255,255,255,0.02)}
+.testimonial .quote{color:rgba(255,255,255,0.85);font-style:italic}
+.testimonial .author{color:var(--muted);font-size:0.9rem}
+.brand-logos img{filter:grayscale(40%);opacity:0.9}
+.newsletter{background:linear-gradient(180deg, rgba(3,6,6,0.7), rgba(6,9,10,0.6));border-radius:8px;border:1px solid rgba(255,255,255,0.02)}
+.newsletter .form-control{max-width:480px}
+.newsletter .btn-success{min-width:140px}
+
+@media(max-width:576px){
+  .newsletter .form-control{width:100%}
+}
